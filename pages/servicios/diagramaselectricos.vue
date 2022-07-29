@@ -7,7 +7,7 @@
         <v-img
           class="white--text align-center rounded-0"
           height="100%"
-          :src="require(`@/assets/images/controlsAC.jpg`)"
+          :src="(`/images/controlsAC.jpg`)"
           gradient="to bottom, rgba(21,22,24,.2), rgba(21,22,24.1)"
         >
           <v-card class="text-center" color="transparent" elevation="0">
@@ -34,12 +34,17 @@
         <p class="font-weight-black text-h6 text-md-h5">
           Servicio de diagramas y planos electricos
         </p>
-        <v-img
-          class="white--text align-end rounded-0"
-          height="190px"
-          :src="require(`@/assets/images/diagramas.jpg`)"
-        >
-        </v-img>
+        <nuxt-img           
+              loading="lazy"   
+              width="333px" 
+              :src="(`/images/diagramas.jpg`)"
+              quality="80" 
+              aspect-ratio="1.4"              
+              sizes="sm:180px md:50vw lg:100vw"               
+              format="webp"    
+              height="190px" 
+              class="white--text align-end rounded-0"         
+             />       
         <p class="pt-8 grey--text text-body-1 text-left font-weight-normal">
           Realizamos levantamiento de la distribución de cargas, arreglo de
           subestaciones, distribución de sistemas de puesta a tierra,
@@ -57,7 +62,7 @@
         </p>
       </v-card>
 
-      <v-card class="py-8 rounded-0 px-3" light elevation="0">
+      <v-card class="pt-3 pb-7 rounded-0 px-3" light elevation="0">
         <v-btn
           color="#FFD763"
           class="

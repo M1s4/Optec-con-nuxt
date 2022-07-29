@@ -7,8 +7,9 @@
         <v-img
           class="white--text align-center rounded-0"
           height="100%"
-          :src="require(`../../assets/images/controlsAC.jpg`)"
-          gradient="to bottom, rgba(21,22,24,.2), rgba(21,22,24.1)"
+          :src="(`/images/controlsAC.jpg`)"
+          gradient="to bottom, rgba(21,22,24,.2), rgba(21,22,24.1)"        
+          
         >
           <v-card class="text-center" color="transparent" elevation="0">
             <v-card-subtitle
@@ -32,29 +33,41 @@
         <p class="font-weight-black text-h6 text-md-h5">
           Servicio de reparacion y mantenimiento a aires acondicionas
         </p>
-        <v-img
-          class="white--text align-end rounded-0"
-          height="190px"
-          :src="require(`../../assets/images/cuatro.jpg`)"
-        >
-        </v-img>
-        <p class="pt-8 grey--text text-body-1 text-left font-weight-normal">
+        <nuxt-img           
+              loading="lazy"   
+              :src="(`/images/cuatro.jpg`)"
+              quality="80" 
+              aspect-ratio="1.4"
+              sizes="sm:333px md:50vw lg:100vw"               
+              format="webp"  
+              width="333px" 
+              height="150px"                  
+              class="white--text align-end rounded-0"       
+        /> 
+        
+        <p class="pt-5 grey--text text-body-1 text-left font-weight-normal">
           En OPTEC contamos con las herramientas y refacciones necesarias para
           realizas cualquier tipo de repararción a equipos domesticos e industriales.
           Realizamos los procedimientos adecuados y respetamos la infraestructura del edificio
         </p>
       </v-card>
 
-      <v-card width="100%" light elevation="0" class="px-5 pt-10 rounded-0">
+      <v-card width="100%" light elevation="0" class="px-5 rounded-0">
         <p class="font-weight-black text-h6 text-md-h5 black--text">
           Problemas comunes en aires acondicionados
         </p>
-        <v-img
-          class="white--text align-end rounded-0"
-          height="160px"
-          :src="require(`../../assets/images/tres.jpg`)"
-        >
-        </v-img>
+        <nuxt-img           
+              loading="lazy"   
+              quality="80" 
+              aspect-ratio="1.4"
+              sizes="sm:333px md:50vw lg:100vw"               
+              format="webp"  
+              width="333"
+              class="white--text align-end rounded-0"
+              height="160px"
+              :src="(`/images/tres.jpg`)"
+        />
+       
         <v-card class="mt-6" color="transparent" elevation="0" width="100%">
           <div class="d-flex pt-4">
             <v-icon color="#EA0A3B" small left>mdi-alert-circle-check</v-icon>

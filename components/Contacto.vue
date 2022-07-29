@@ -3,8 +3,7 @@
     <v-card
       class="d-flex pa-0 ma-0 "
       outlined
-      tile
-      
+      tile      
       height="auto"
       light
       color="white"
@@ -97,6 +96,7 @@
         height="550"
         style="border: 0"
         loading="lazy"
+        defer
       >
       </iframe>
     </v-card>

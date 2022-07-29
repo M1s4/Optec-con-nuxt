@@ -5,6 +5,7 @@
       <BtnBack/>
 
       <v-card width="100%" color="red" height="130" class="text-center">
+        
         <v-img
           class="white--text align-center rounded-0"
           height="100%"
@@ -27,7 +28,7 @@
       </v-card>
 
       <v-card
-        width="100%"        
+        max-width="100%"        
         elevation="0"
         class="text-center pt-13 pb-5 px-5 rounded-0"
         light
@@ -36,12 +37,16 @@
         <p class="font-weight-black text-h6 text-md-h5">
           Servicio de Instalacion de Aire Acondicionado
         </p>
-        <v-img
-          class="white--text align-end rounded-0"
-          height="190px"
-          :src="require(`@/assets/images/reemplazodos.jpg`)"
-        >
-        </v-img>
+        <nuxt-img              
+             sizes="sm:43vw md:50vw lg:100vw" 
+             width="70vh"
+             height="178px"             
+             loading="lazy"      
+             quality="80" 
+             class="white--text align-end rounded-0"
+             :src="(`/images/reemplazodos.jpg`)"
+             format="webp" 
+             />            
         <p class="pt-8 grey--text text-body-1 text-left font-weight-normal">
           En OPTEC contamos con personal capacitado para hacer una instalación profesional de equipo de aire acondicionado doméstico e industrial.
         </p>
@@ -54,12 +59,17 @@
         <p class="font-weight-black text-h6 text-md-h5 black--text">
           Problemas comunes en aires acondicionados
         </p>
-        <v-img
-          class="white--text align-end rounded-0"
-          height="160px"
-          :src="require(`@/assets/images/tres.jpg`)"
-        >
-        </v-img>
+        <nuxt-img
+                  sizes="md:50vw lg:100vw"
+                  width="333"
+                  loading="lazy"                  
+                  height="170px"
+                  :src="(`/images/tres.jpg`)"
+                  quality="80"
+                  fit="cover"
+                  class="white--text align-end rounded-0"
+                />
+ 
         <v-card class="pt-6" color="transparent" elevation="0" width="100%">
           <div class="d-flex pt-4">
             <v-icon color="#EA0A3B" small left>mdi-alert-circle-check</v-icon>
@@ -133,7 +143,7 @@
 import BtnBack from "../../components/BtnBack.vue";
 export default {
   components: {
-    BtnBack
+    BtnBack,
   },
 };
 </script>

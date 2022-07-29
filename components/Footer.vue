@@ -43,8 +43,15 @@
       </div>
       <div class="d-flex justify-center flex-column mt-5">
         <v-card color="transparent" class="mx-auto my-5" elevation="0">
-           <v-btn width="150" color="transparent" elevation="0" large class="mx-auto">
-          <v-img width="140" :src="require(`../assets/images/icons/OPTECop2.svg`)"> </v-img>
+           <v-btn width="150" color="transparent" elevation="0" large class="mx-auto" text>
+            <nuxt-img           
+              loading="lazy"   
+              width="140" :src="(`/images/icons/OPTECop2.svg`)"
+              quality="80" 
+              aspect-ratio="1.4"
+              sizes="sm:180px md:50vw lg:100vw"               
+              format="webp"              
+             /> 
         </v-btn>
         <div class="mx-auto text-center mt-2">
           <v-btn icon small class="mx-2" href="https://api.whatsapp.com/send?phone=3221807041&text=Hola!%20" target="_blank">
@@ -61,8 +68,8 @@
           elevation="0"
         >
           <div v-for="(item, i) in bancos" :key="i">
-            <img
-              :src="require(`../assets/images/icons/${item.src}`)"
+            <nuxt-img
+              :src="(`/images/icons/${item.src}`)"
               :width="item.alto"
               :height="item.ancho"
               alt=""

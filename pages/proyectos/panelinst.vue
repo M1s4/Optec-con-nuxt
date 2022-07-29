@@ -7,7 +7,7 @@
         <v-img
           class="white--text align-center rounded-0"
           height="100%"
-          :src="require(`../../assets/images/backproyectos.jpg`)"
+          :src="(`/images/backproyectos.jpg`)"
           position="center 60%"
           gradient="rgba(21,22,24,.2), rgba(21,22,24.1)"
         >
@@ -77,25 +77,30 @@
         </p>
         <v-row justify="space-around">
           <v-card width="100%" elevation="0">
-            <v-slide-group class="pa-4" active-class="success">
+            <v-slide-group class="pa-4" active-class="white">
               <v-slide-item
                 v-for="(item, i) in nosotros"
                 :key="i"
                 v-slot="{ active, toggle }"
               >
                 <v-card
-                  :color="active ? undefined : 'grey lighten-1'"
-                  class="mr-2 rounded-0"
+                  :color="active ? undefined : 'white'"
+                  class=" rounded-0 px-2"
                   height="150"
                   width="180"
                   @click="toggle"
+                  elevation="0"
                 >
-                  <v-img
-                    width="100%"
-                    height="100%"
-                    :src="require(`../../assets/images/${item.img}`)"
-                  />
-                  <v-img />
+                <nuxt-img              
+                  sizes="sm:100% md:50vw lg:100vw" 
+                  width="100%"
+                  height="100%"             
+                  loading="lazy"      
+                  quality="80" 
+                  class="white--text align-end rounded-0"
+                  :src="(`/images/${item.img}`)"
+                  format="webp"
+                  />                       
                 </v-card>
               </v-slide-item>
             </v-slide-group>

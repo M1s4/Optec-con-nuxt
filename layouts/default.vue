@@ -73,16 +73,26 @@
     </v-app-bar>
 
     <v-navigation-drawer v-model="drawer" app temporary light>
-      <v-card elevation="0" class="text-center" color="transparent" light>
+      <v-card elevation="0" class="text-center" color="white" light>
         <v-btn
           height="80"
           elevation="0"
           class="rounded-0 mt-10"
-          color="transparent"
+          color="white"
           to="/"
           text
         >
-          <v-img :src="require(`@/assets/images/icons/OPTEC.svg`)"> </v-img>
+        <nuxt-img          
+        :src="(`/images/icons/OPTECop2Black.png`)"
+        width="150"
+        aspect-ratio="1.4"
+        loading="lazy"
+         :placeholder="[100, 50, 10]" 
+        class="text-center" 
+        quality="80"
+          />
+          
+          
         </v-btn>
       </v-card>
       <v-list nav dense class="mt-5">

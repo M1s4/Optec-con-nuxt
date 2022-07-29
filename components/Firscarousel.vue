@@ -6,18 +6,27 @@
       hide-delimiters
       :show-arrows="false"
       class="ma-0 pa-0"
-      interval="15000"
+      interval="5000"
+      color="white"
     >
       <v-carousel-item v-for="(item, i) in items" :key="i">
-        <v-sheet color="grey" >
-          <nuxt-img src="/images/uno.jpg" sizes="sm:100vw md:50vw lg:400px" />
-          
+        <v-sheet color="white" class="d-md-flex justify-end">
+          <nuxt-img 
+             :src="(`/images/${item.img}`)"
+             sizes="sm:100vw md:100vw lg:100vw"              
+             format="webp"  
+             width="650px"
+             quality="80" 
+             fit="outside"
+             height="550"
+             class=""
+             />          
         </v-sheet>
       </v-carousel-item>
     </v-carousel>
-     <v-card absolute width="320" height="370" id="vCard" class="rounded-0 grey--text">
+     <v-card absolute width="320" height="370" id="vCard" class="rounded-0 grey--text ml-md-15" elevation="0">
                <div class="py-10 px-8">
-                <p class="mb-0 text-caption" style="color:#09AEB8;">
+                <p class="mb-0 text-caption " style="color:#09AEB8;">
                   Comprometidos con servicios de primera calidad
                 </p>
                 <p class="font-weight-black text-h4 white--text">
@@ -44,6 +53,15 @@ export default {
         "deep-purple accent-4",
       ],
         items: [
+           {
+        title: "Tienda en linea",
+        precio: "9000",
+        text: `It's New Release Friday`,
+        horario: "16:20",
+        horario2: "20:16",
+        subtext: "Newly released songs. Updated daily.",
+        img: "slider-uno.jpg",
+      },
       {
         title: "Tienda en linea",
         precio: "9000",
@@ -51,7 +69,7 @@ export default {
         horario: "16:20",
         horario2: "20:16",
         subtext: "Newly released songs. Updated daily.",
-        img: "uno.jpg",
+        img: "panelS.jpg",
       },
       {
         title: "Web con blog",
@@ -76,6 +94,14 @@ export default {
         precio: "9000",
         horario2: "20:16",
         img: "seis.jpg",
+      }, 
+      {
+        title: "Web para empresa",
+        text: "Ambient Bass",
+        subtext: "Chill beats to mellow you out.",
+        precio: "9000",
+        horario2: "20:16",
+        img: "proyectosBack.jpg",
       },         
     ],
       slides: ["First", "Second", "Third", "Fourth", "Fifth"],
@@ -90,4 +116,31 @@ export default {
     margin-top:-420px;
     margin-bottom:70px;
   }
+    
+  @media only screen and (min-width: 780px) and (max-width: 1800px) {
+
+      #vCard{
+        background-color:transparent!important;
+        margin-top:-450px;
+        margin-left:150px !important;
+        width:500px !important ;
+      }
+
+      #vCard p{
+        color:black !important;
+      }
+
+      #vCard p:nth-child(1) {
+          font-size:1vw !important;
+          color:grey !important;
+          font-weight:bold !important;
+          padding-bottom: 5px !important;
+      }
+
+      #vCard p:nth-child(2) {
+          font-size:4vw !important;
+          line-height: 4vw !important;
+      }
+      
+    }
 </style>

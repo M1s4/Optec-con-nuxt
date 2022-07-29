@@ -7,7 +7,7 @@
         <v-img
           class="white--text align-center rounded-0"
           height="100%"
-          :src="require(`../../assets/images/backproyectos.jpg`)"
+          :src="(`/images/backproyectos.jpg`)"
           position="center 60%"
           gradient="rgba(21,22,24,.2), rgba(21,22,24.1)"
         >
@@ -44,7 +44,7 @@
         </p>        
       </v-card>
 
-      <v-card elevation="0" class="px-3 pb-13 rounded-0" light>
+      <v-card elevation="0" class="px-3 pb-5 rounded-0" light>
         <p class="font-weight-bold text-subtitle-1 pr-15 mb-2">
          LO QUE HICIMOS
         </p>
@@ -66,22 +66,24 @@
             <v-slide-group class="pa-4" active-class="success">
               <v-slide-item
                 v-for="(item, i) in nosotros"
-                :key="i"
-                v-slot="{ active, toggle }"
+                :key="i"        
+                v-slot="{ toggle }"          
               >
-                <v-card
-                  :color="active ? undefined : 'grey lighten-1'"
-                  class="mr-2 rounded-0"
+                <v-card                  
+                  class=" rounded-0 mx-2"
                   height="150"
-                  width="180"
-                  @click="toggle"
+                  @click="toggle"  
                 >
-                  <v-img
-                    width="100%"
-                    height="100%"
-                    :src="require(`../../assets/images/${item.img}`)"
-                  />
-                  <v-img />
+                <nuxt-img              
+                  sizes="sm:43vw md:50vw lg:100vw" 
+                  width="100%"
+                  height="100%"             
+                  loading="lazy"      
+                  quality="80" 
+                  class="white--text align-end rounded-0"
+                  :src="(`/images/${item.img}`)"
+                  format="webp"
+                  />                    
                 </v-card>
               </v-slide-item>
             </v-slide-group>

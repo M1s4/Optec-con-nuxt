@@ -1,60 +1,65 @@
 <template>
   <v-container fluid class="ma-0 pa-0" color="white">
-    <v-card  elevation="0" class="pt-3 px-3 rounded-0" color="white" light >
-        <v-card elevation="0" class="rounded-0" light>
-            <p class="cyan--text font-weight-bold text-caption">
-            <v-icon left color="cyan">mdi-minus</v-icon>
-            PROYECTOS RECIENTES
-            </p>
-            <p class="font-weight-black text-h5 pr-15">
-            Nuestros Ultimos Proyectos
-            </p>
-        </v-card>
-        <v-card  elevation="0">
-            <v-carousel
-                height="auto"
-                class="pb-13 custom"
-                cycle
-                interval="10000"
-                :show-arrows="false"
-                delimiter-icon="mdi-minus"
-                hide-delimiter-background
+    <v-card elevation="0" class="pt-3 px-3 rounded-0" color="white" light>
+      <v-card elevation="0" class="rounded-0" light>
+        <p class="cyan--text font-weight-bold text-caption">
+          <v-icon left color="cyan">mdi-minus</v-icon>
+          PROYECTOS RECIENTES
+        </p>
+        <p class="font-weight-black text-h5 pr-15">
+          Nuestros Ultimos Proyectos
+        </p>
+      </v-card>
+      <v-card elevation="0">
+        <v-carousel
+          height="auto"
+          class="pb-13 custom"
+          cycle
+          interval="10000"
+          :show-arrows="false"
+          delimiter-icon="mdi-minus"
+          hide-delimiter-background
+        >
+          <v-carousel-item v-for="(item, i) in proyectos" :key="i">
+            <v-card
+              class="mx-auto"
+              max-width="400"
+              light
+              elevation="2"
+              outlined
             >
-                <v-carousel-item v-for="(item, i) in proyectos" :key="i">
-                <v-card class="mx-auto" max-width="400" light elevation="2" outlined>
-                    <v-img
-                    class="white--text align-end rounded-0"
-                    height="200px"
-                    :src="require(`../assets/images/${item.srcImg}`)"
-                    gradient="to bottom, rgba(21,22,24,.2), rgba(21,22,24.1)"
-                    >
-                    <v-card-title class="text-subtitle-1 font-weight-black">{{
-                        item.nombre
-                    }}</v-card-title>
-                    <v-card-subtitle class="text-caption">
-                        {{ item.ciudad }}
-                    </v-card-subtitle>
-                    </v-img>
+              <v-img
+                class="white--text align-end rounded-0"
+                height="200px"
+                :src="require(`../static/images/${item.srcImg}`)"
+                gradient="to bottom, rgba(21,22,24,.2), rgba(21,22,24.1)"
+              >
+                <v-card-title class="text-subtitle-1 font-weight-black">{{
+                  item.nombre
+                }}</v-card-title>
+                <v-card-subtitle class="text-caption">
+                  {{ item.ciudad }}
+                </v-card-subtitle>
+              </v-img>
 
-                    <v-card-text class="text-body-1">
-                    {{ item.data }}
-                    </v-card-text>
+              <v-card-text class="text-body-1">
+                {{ item.data }}
+              </v-card-text>
 
-                    <v-card-actions>
-                    <v-btn
-                        color="#09AEB8"
-                        text
-                        class="text-lowercase text-caption"
-                        :to="item.url"
-                    >
-                        Seguir leyendo <v-icon small right>mdi-skip-next</v-icon>
-                    </v-btn>
-                    </v-card-actions>
-                </v-card>
-                </v-carousel-item>
-            </v-carousel>
-        </v-card>
-     
+              <v-card-actions>
+                <v-btn
+                  color="#09AEB8"
+                  text
+                  class="text-lowercase text-caption"
+                  :to="item.url"
+                >
+                  Seguir leyendo <v-icon small right>mdi-skip-next</v-icon>
+                </v-btn>
+              </v-card-actions>
+            </v-card>
+          </v-carousel-item>
+        </v-carousel>
+      </v-card>
     </v-card>
   </v-container>
 </template>

@@ -13,30 +13,37 @@
       </p>
 
       <p class="grey--text text-body-1">
-        En <strong>OPTEC</strong> somos una empresa que contamos con un equipo de Ingenieros experimentados, calificados y confiables que
-        brinda soluciones integrales de ingenieria, proyectos de obra eléctrica, mantenimiento industrial y residencial para propiedades residenciales y comerciales.               
+        En <strong>OPTEC</strong> somos una empresa que contamos con un equipo
+        de Ingenieros experimentados, calificados y confiables que brinda
+        soluciones integrales de ingenieria, proyectos de obra eléctrica,
+        mantenimiento industrial y residencial para propiedades residenciales y
+        comerciales.
       </p>
       <v-row justify="space-around">
         <v-card width="100%" elevation="0">
-          <v-slide-group class="pa-4" active-class="success">
+          <v-slide-group class="pa-4" >
             <v-slide-item
               v-for="(item, i) in nosotros"
               :key="i"
-              v-slot="{ active, toggle }"
+              v-slot="{ toggle }"
             >
               <v-card
-                :color="active ? undefined : 'grey lighten-1'"
                 class="mr-2 rounded-0"
                 height="200"
                 width="180"
                 @click="toggle"
               >
-                <img
+                <nuxt-img
+                  sizes="sm:100% md:50vw lg:100vw"
+                  loading="lazy"
                   width="100%"
                   height="100%"
-                  :src="require(`../assets/images/${item.img}`)"
+                  :src="`/images/${item.img}`"
+                  quality="80"
+                  fit="cover"
+                  class="ml-2"
+                  format="webp"  
                 />
-                <img />
               </v-card>
             </v-slide-item>
           </v-slide-group>
@@ -94,16 +101,12 @@ export default {
           img: "Nocho.jpg",
           data: "",
         },
-        {
-          nombre: "",
-          img: "Ncuatro.jpg",
-          data: "",
-        },
+
         {
           nombre: "",
           img: "Ntres.jpg",
           data: "",
-        },      
+        },
       ],
     };
   },

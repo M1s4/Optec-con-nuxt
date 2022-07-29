@@ -10,25 +10,24 @@
         marcas de equipos de enfriamiento de aire
       </p>
         </v-card>
-        <v-slide-group v-model="model" class="px-7 py-5" active-class="success" light>
+        <v-slide-group v-model="model" class="px-7 py-5" light>
         <v-slide-item
             v-for="(item, i) in marcas"
-            :key="i"
-            v-slot="{  toggle }" 
+            :key="i"                                    
             >
             <v-card
-            class="mr-13 rounded-0"
-            height="40"
-            width="75"
+            class=" rounded-0"            
             elevation="0"
-            @click="toggle"
             >
-            <img
-                width="100%"
-                height="100%"
-                :src="require(`../assets/images/${item.img}`)"
-            />
-            <img />
+            <nuxt-img           
+             loading="lazy"              
+             :width="item.width"
+             :height="item.height"
+             :src="(`/images/${item.img}`)"
+             quality="80" 
+             format="webp"  
+             class="px-7"            
+             />      
             </v-card>
         </v-slide-item>
         </v-slide-group>
@@ -45,19 +44,27 @@ export default {
      
         {
           nombre: "",
+          with:"35px",
+          height:"35px",
           img: "logo-lg.svg",
         },
         {
           nombre: "",
+          with:"33px",
+          height:"33px",
           img: "samsung.svg",
         },
         {
           nombre: "",
+          with:"30px",
+          height:"30px",
           img: "toshiba.svg",
         },
         {
           nombre: "",
-          img: "GG.png",
+          with:"60px",
+          height:"40px",
+          img: "general-electric.svg",
         },
       ],
       model: null,

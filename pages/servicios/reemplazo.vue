@@ -7,7 +7,7 @@
         <v-img
           class="white--text align-center rounded-0"
           height="100%"
-          :src="require(`../../assets/images/controlsAC.jpg`)"
+          :src="(`/images/controlsAC.jpg`)"
           gradient="to bottom, rgba(21,22,24,.2), rgba(21,22,24.1)"
         >
           <v-card class="text-center" color="transparent" elevation="0">
