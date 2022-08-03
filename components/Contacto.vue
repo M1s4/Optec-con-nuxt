@@ -15,7 +15,7 @@
           width="400px"
           v-if="show"
         >
-          <v-form ref="form" class="Formulario pt-5" lazy-validation>
+          <v-form ref="form" class="Formulario pt-5 py-md-6" lazy-validation>
             <div class="font-weight-black text-h6 text-md-h5">
               INFORMACION DE CONTACTO
             </div>

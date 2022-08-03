@@ -121,8 +121,8 @@ export default {
 
       #vCard{
         background-color:transparent!important;
-        margin-top:-450px;
-        margin-left:150px !important;
+        margin-top:-490px;
+        margin-left:70px !important;
         width:500px !important ;
       }
 

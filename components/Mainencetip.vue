@@ -1,10 +1,11 @@
 <template>
   <v-container fluid class="ma-0 pa-0 "  color="white">
-    <v-card class="ma-0 pa-0 py-md-15 pt-8 px-3 rounded-0 " elevation="0" light>
-       <p class="font-weight-black text-h5 pr-15 pl-md-15">
+    <v-card class="ma-0 pa-0 rounded-0 py-md-10" light elevation="0" max-width="100vw">
+         <v-card class="ma-0 pa-0 py-md-15 pt-8 px-3 px-md-0 rounded-0 mx-md-auto" elevation="0" light max-width="85vw">
+       <p class="font-weight-black text-h5 pr-15 ">
         ¿Cuando dar mantenimiento a tu aire acondicionado?
       </p>
-    <v-card elevation="0" class="pa-md-3 pt-4 rounded-0 pt-md-5 d-md-flex mx-auto" light width="90vw" >
+    <v-card elevation="0" class=" pt-4 rounded-0 pt-md-5 d-md-flex mx-auto" light width="90vw" >
      
       <nuxt-img
               :src="(`/images/tip.jpg`)"
@@ -16,7 +17,7 @@
               fit="cover"
               format="webp"  
             /> 
-      <v-card elevation="0" light class="rounded-0 pr-md-15 pl-md-5 pt-md-3 ma-0">
+      <v-card elevation="0" light class="rounded-0 pr-md-15 pl-md-10 pt-md-3 ma-0">
         <p class="grey--text text-body-1 mr-md-15">
         Si un aire acondicionado no recibe un buen cuidado o un correcto
         mantenimiento, su tiempo de vida se reduce drásticamente ya que cuentan
@@ -56,7 +57,9 @@
       </v-card> 
       
     </v-card>
+        </v-card>
     </v-card>
+    
     
   </v-container>
 </template>

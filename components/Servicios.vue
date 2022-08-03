@@ -1,44 +1,52 @@
 <template>
-  <v-container fluid class="ma-0 pa-0">
-    <v-card
-      max-width="100vw"
-      width="100vw"
-      elevation="0"
-      light
-      class="rounded-0 d-md-flex"
-    >
-      <v-card
+  <v-container fluid class="ma-0 pa-0" color="white">
+    <v-card width="100vw" light elevation="0" class="rounded-0 ma-0 pa-0">
+     
+     <v-card
+        max-width="85vw"
+        width="100vw"
         elevation="0"
-        class="pa-3 rounded-0 pt-9"
         light
-        max-width="25vw"
-        min-width="365"
+        class="rounded-0 d-md-flex mx-md-auto pa-0 ma-0"
       >
-        <p class="cyan--text font-weight-bold text-caption">
-          <v-icon left color="cyan">mdi-minus</v-icon>
-          NUESTROS SERVICIOS
-        </p>
-        <p class="font-weight-black text-h5 pr-15">
-          Brindamos una gama completa de servicios para su hogar.
-        </p>
-        <p class="grey--text text-body-1">
-          Si un aire acondicionado no recibe un buen cuidado o un correcto
-          mantenimiento, su tiempo de vida se reduce drásticamente ya que
-          cuentan con piezas muy delicadas que precisan de recambios cada cierto
-          tiempo.
-        </p>
-      </v-card>
+        <v-card
+          elevation="0"
+          class="pa-3 rounded-0 pt-9"
+          light
+          max-width="25vw"
+          min-width="365"
+        >
+          <p class="cyan--text font-weight-bold text-caption">
+            <v-icon left color="cyan">mdi-minus</v-icon>
+            NUESTROS SERVICIOS
+          </p>
+          <p class="font-weight-black text-h5 pr-15">
+            Brindamos una gama completa de servicios para su hogar.
+          </p>
+          <p class="grey--text text-body-1">
+            Si un aire acondicionado no recibe un buen cuidado o un correcto
+            mantenimiento, su tiempo de vida se reduce drásticamente ya que
+            cuentan con piezas muy delicadas que precisan de recambios cada
+            cierto tiempo.
+          </p>
+        </v-card>
 
-      <v-card
-        elevation="0"
-        light
-        max-width="75vw"
-        min-width="365"
-        class="pa-3 rounded-0 pt-9"
-      >
-        <v-carousel height="auto" cycle interval="10000" hide-delimiters light>
-            <v-carousel-item v-for="(item, i) in servicios" :key="i"  >
-              <v-card class="d-flex pa-3 rounded-0" elevation="0" light >
+        <v-card
+          elevation="0"
+          light
+          max-width="75vw"
+          min-width="365"
+          class="pa-3 rounded-0 pt-9"
+        >
+          <v-carousel
+            height="auto"
+            cycle
+            interval="10000"
+            hide-delimiters
+            light
+          >
+            <v-carousel-item v-for="(item, i) in servicios" :key="i">
+              <v-card class="d-flex pa-3 rounded-0" elevation="0" light>
                 <nuxt-img
                   :src="`/images/icons/${item.icon}`"
                   sizes="sm:100vw md:50vw lg:100vw"
@@ -63,28 +71,35 @@
                 </div>
               </v-card>
             </v-carousel-item>
-        </v-carousel>
+          </v-carousel>
+        </v-card>
       </v-card>
-    </v-card>
 
-    <v-card class="d-flex justify-center  justify-md-start pl-md-2 pt-3 rounded-0" elevation="0" light >
-      <v-btn
-        color="#FFD763"
-        class="
-          font-weight-normal
-          rounded-0
-          py-6
-          text-lowercase text--grey-darken-4
-        "
-        width="90%"
-        href="https://api.whatsapp.com/send?phone=3221807041&text=Hola!%20"
-        target="_blank"
-        max-width="23vw"
-        min-width="250px"
+      <v-card
+        class="d-flex justify-center justify-md-start pl-md-15 pt-3 rounded-0"
+        elevation="0"
+        light
       >
-        <v-icon left> mdi-cellphone-text </v-icon>
-        pedir cotizacion
-      </v-btn>
+        <v-btn
+          color="#FFD763"
+          class="
+            font-weight-normal
+            rounded-0
+            py-6
+            ml-md-10
+            text-lowercase text--grey-darken-4
+          "
+          width="90%"
+          href="https://api.whatsapp.com/send?phone=3221807041&text=Hola!%20"
+          target="_blank"
+          max-width="23vw"
+          min-width="250px"
+        >
+          <v-icon left> mdi-cellphone-text </v-icon>
+          pedir cotizacion
+        </v-btn>
+      </v-card>
+
     </v-card>
   </v-container>
 </template>
